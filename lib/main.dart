@@ -7,10 +7,10 @@ import 'package:flutter_web_plugins/flutter_web_plugins.dart'; // Add this impor
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   // Set URL strategy to path-based (removes the hash # from URLs)
   setUrlStrategy(PathUrlStrategy());
-  
+
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
@@ -46,31 +46,32 @@ class MyApp extends StatelessWidget {
       // Use routes for navigation
       initialRoute: '/',
       routes: {
-        '/': (context) => const AdminDashboard(),
+        '/': (context) => const ResponsiveFormPage(),
         '/dashboard': (context) => const AdminDashboard(),
       },
       // Handle unknown routes
       onUnknownRoute: (settings) {
         return MaterialPageRoute(
-          builder: (context) => Scaffold(
-            appBar: AppBar(title: const Text('Page Not Found')),
-            body: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    'Oops! Page not found.',
-                    style: TextStyle(fontSize: 24),
+          builder:
+              (context) => Scaffold(
+                appBar: AppBar(title: const Text('Page Not Found')),
+                body: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'Oops! Page not found.',
+                        style: TextStyle(fontSize: 24),
+                      ),
+                      const SizedBox(height: 20),
+                      ElevatedButton(
+                        onPressed: () => Navigator.of(context).pushNamed('/'),
+                        child: const Text('Go to Home'),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: () => Navigator.of(context).pushNamed('/'),
-                    child: const Text('Go to Home'),
-                  ),
-                ],
+                ),
               ),
-            ),
-          ),
         );
       },
     );
