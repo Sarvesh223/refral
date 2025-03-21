@@ -18,6 +18,8 @@ dependencies:
   fl_chart: ^0.70.2
   intl: ^0.20.2
   data_table_2: ^2.6.0
+  responsive_framework: ^1.5.1
+  flutter_admin_scaffold: ^1.4.0
 
 dev_dependencies:
   flutter_test:
