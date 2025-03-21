@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "316011780909",
+    "project_id": "instgram-bdf9a",
+    "storage_bucket": "instgram-bdf9a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316011780909:android:18f4d05a713c868fd391a4",
+        "android_client_info": {
+          "package_name": "com.example.form"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCm1NZYyFEpZd8HO0AWLrTaFaGPdsidoX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
