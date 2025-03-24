@@ -191,7 +191,7 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
         _profileCreated = true;
       });
 
-      _showSnackBar('Profile created successfully', Colors.teal);
+      _showSnackBar('Profile created successfully', Colors.black);
 
       // After profile creation, prompt user to follow on Instagram
       _promptInstagramFollow();
@@ -220,7 +220,7 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
                 Navigator.of(context).pop();
                 _redirectToInstagram();
               },
-              style: TextButton.styleFrom(foregroundColor: Colors.teal),
+              style: TextButton.styleFrom(foregroundColor: Colors.black),
               child: const Text('Follow Now'),
             ),
           ],
@@ -282,7 +282,7 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
                 Navigator.of(context).pop();
                 _verifyInstagramFollow();
               },
-              style: TextButton.styleFrom(foregroundColor: Colors.teal),
+              style: TextButton.styleFrom(foregroundColor: Colors.black),
               child: const Text('Verify'),
             ),
           ],
@@ -401,9 +401,9 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
                   horizontal: 16,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.teal.shade50,
+                  color: const Color.fromARGB(255, 42, 42, 42),
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: Colors.teal),
+                  border: Border.all(color: Colors.black),
                 ),
                 child: SelectableText(
                   referralCode,
@@ -426,7 +426,7 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              style: TextButton.styleFrom(foregroundColor: Colors.teal),
+              style: TextButton.styleFrom(foregroundColor: Colors.black),
               child: const Text('Done'),
             ),
           ],
@@ -475,7 +475,7 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
         _isLoading = false;
       });
 
-      _showSnackBar('Profile updated successfully', Colors.teal);
+      _showSnackBar('Profile updated successfully', Colors.black);
     } catch (e) {
       setState(() {
         _isLoading = false;
@@ -541,7 +541,10 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Colors.teal.shade50, Colors.blue.shade50],
+            colors: [
+              const Color.fromARGB(255, 30, 30, 30),
+              Colors.blue.shade50,
+            ],
           ),
         ),
         child: SafeArea(
@@ -561,7 +564,7 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
                     padding: const EdgeInsets.all(24),
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(2),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.06),
@@ -580,7 +583,7 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
                           style: const TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.bold,
-                            color: Colors.teal,
+                            color: Colors.black,
                           ),
                         ),
                         const SizedBox(height: 8),
@@ -605,7 +608,7 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
                                   labelText: 'Full Name',
                                   prefixIcon: Icon(
                                     Icons.person_outline,
-                                    color: Colors.teal,
+                                    color: Colors.black,
                                   ),
                                 ),
                                 validator: (value) {
@@ -623,7 +626,7 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
                                   labelText: 'Phone Number',
                                   prefixIcon: const Icon(
                                     Icons.phone_outlined,
-                                    color: Colors.teal,
+                                    color: Colors.black,
                                   ),
                                   hintText: '10-digit number',
                                   suffixIcon:
@@ -631,7 +634,7 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
                                           ? IconButton(
                                             icon: const Icon(
                                               Icons.send,
-                                              color: Colors.teal,
+                                              color: Colors.black,
                                             ),
                                             onPressed:
                                                 _isLoading
@@ -675,12 +678,37 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
                                     borderRadius: BorderRadius.circular(8),
                                     fieldHeight: 50,
                                     fieldWidth: 50, // Adjusted for 4 digits
-                                    activeFillColor: Colors.teal.shade50,
-                                    selectedFillColor: Colors.teal.shade100,
+                                    activeFillColor: const Color.fromARGB(
+                                      255,
+                                      46,
+                                      46,
+                                      46,
+                                    ),
+                                    selectedFillColor: const Color.fromARGB(
+                                      255,
+                                      29,
+                                      29,
+                                      29,
+                                    ),
                                     inactiveFillColor: Colors.white,
-                                    activeColor: Colors.teal,
-                                    selectedColor: Colors.teal,
-                                    inactiveColor: Colors.teal.shade200,
+                                    activeColor: const Color.fromARGB(
+                                      255,
+                                      68,
+                                      68,
+                                      68,
+                                    ),
+                                    selectedColor: const Color.fromARGB(
+                                      255,
+                                      57,
+                                      56,
+                                      56,
+                                    ),
+                                    inactiveColor: const Color.fromARGB(
+                                      255,
+                                      39,
+                                      39,
+                                      39,
+                                    ),
                                   ),
                                   keyboardType: TextInputType.number,
                                   enableActiveFill: true,
@@ -698,7 +726,7 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
                                     ElevatedButton(
                                       onPressed: _isLoading ? null : _verifyOTP,
                                       style: ElevatedButton.styleFrom(
-                                        backgroundColor: Colors.teal,
+                                        backgroundColor: Colors.black,
                                         foregroundColor: Colors.white,
                                       ),
                                       child: const Text('Verify OTP'),
@@ -714,7 +742,7 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
                                   labelText: 'Instagram Handle',
                                   prefixIcon: Icon(
                                     Icons.alternate_email,
-                                    color: Colors.teal,
+                                    color: Colors.black,
                                   ),
                                   hintText: '@username',
                                 ),
@@ -751,9 +779,14 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
                                     horizontal: 16,
                                   ),
                                   decoration: BoxDecoration(
-                                    color: Colors.teal.shade50,
+                                    color: const Color.fromARGB(
+                                      255,
+                                      55,
+                                      55,
+                                      55,
+                                    ),
                                     borderRadius: BorderRadius.circular(8),
-                                    border: Border.all(color: Colors.teal),
+                                    border: Border.all(color: Colors.black),
                                   ),
                                   child: Row(
                                     mainAxisAlignment:
@@ -770,7 +803,7 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
                                       IconButton(
                                         icon: const Icon(
                                           Icons.copy,
-                                          color: Colors.teal,
+                                          color: Colors.black,
                                         ),
                                         onPressed: () {
                                           // Copy to clipboard functionality would go here
@@ -823,13 +856,13 @@ class _ResponsiveFormPageState extends State<ResponsiveFormPage> {
                                           ? _verifyOTP
                                           : _verifyPhone,
                                   style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.teal,
+                                    backgroundColor: Colors.black,
                                     foregroundColor: Colors.white,
                                     padding: const EdgeInsets.symmetric(
                                       vertical: 16,
                                     ),
                                     shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(12),
+                                      borderRadius: BorderRadius.circular(6),
                                     ),
                                     elevation: 0,
                                   ),

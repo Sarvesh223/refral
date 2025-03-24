@@ -49,6 +49,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const ResponsiveFormPage(),
         '/dashboard': (context) => const AdminDashboard(),
       },
+      
       // Handle unknown routes
       onUnknownRoute: (settings) {
         return MaterialPageRoute(

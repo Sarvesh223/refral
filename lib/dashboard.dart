@@ -868,7 +868,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Admin Dashboard'),
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.black,
         foregroundColor: Colors.white,
         actions: [
           IconButton(
@@ -1477,7 +1477,6 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   color: Colors.blueGrey.shade800,
                 ),
               ),
-              
             ],
           ),
           SizedBox(height: 20),
